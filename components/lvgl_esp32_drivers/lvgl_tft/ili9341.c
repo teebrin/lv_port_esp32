@@ -117,7 +117,7 @@ void ili9341_init(void)
 	ili9341_enable_backlight(true);
 
 #if ILI9341_INVERT_DISPLAY
-	uint8_t data[] = {0x68};
+	uint8_t data[] = {0xe8};
 	// this same command also sets rotation (portrait/landscape) and inverts colors.
 	// https://gist.github.com/motters/38a26a66020f674b6389063932048e4c#file-ili9844_defines-h-L24
 	ili9341_send_cmd(0x36);
